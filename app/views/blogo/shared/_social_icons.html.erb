@@ -1,0 +1,19 @@
+<%= link_to '',"https://www.kwendoo.com/", class: 'logo-icon', target: 'logo' %>
+
+<%= link_to '',"https://www.kwendoo.com/", class: 'home-icon', target: 'home' %>
+
+<% if Blogo.config.twitter_username %>
+  <%= link_to '',"https://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-icon', target: 'twitter' %>
+<% end %>
+
+<% if Blogo.config.github_username %>
+  <%= link_to '',"https://github.com/#{Blogo.config.github_username}", class: 'github-icon', target: 'github' %>
+<% end %>
+
+<% if Blogo.config.facebook_username %>
+  <%= link_to '',"https://facebook.com/#{Blogo.config.facebook_username}", class: 'facebook-icon', target: 'facebook' %>
+<% end %>
+
+<% if Blogo.config.show_rss_icon %>
+  <%= link_to '', blogo_feed_path, class: 'rss-icon', target: 'rss' %>
+<% end %>

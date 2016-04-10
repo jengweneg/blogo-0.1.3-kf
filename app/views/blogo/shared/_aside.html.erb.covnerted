@@ -1,0 +1,35 @@
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;j$ <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+</script><div id="fb-root">
+</div><script>
+ (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); 
+</script><aside>
+<% if @recent_posts
+ %><header>
+<h1>
+<%= ::Temple::Utils.escape_html((t('blogo.user.recent_posts'))) %>
+</h1></header><ul class="blogo-recent-posts">
+<% @recent_posts.each do |post|
+ %><li>
+<%= ::Temple::Utils.escape_html((link_to post.title, blogo_post_path(post))) %>
+</li><% end %></ul><% end %><header>
+<h1>
+<%= ::Temple::Utils.escape_html((t('blogo.user.social_media_twitter'))) %>
+</h1></header>
+
+<header>
+<h1>
+<%= ::Temple::Utils.escape_html((t('blogo.user.social_media_facebook'))) %>
+<div class="facebook-box">
+<div class="fb-like" data-action="like" data-colorscheme="dark" data-header="false" data-height="40" data-href="<%= ::Temple::Utils.escape_html((Configuration['facebook_url'])) %>" data-layout="standard" data-send="true" data-show-border="false" data-show-faces="true" data-width="224">
+</div></div><div class="twitter-box">
+<%= ::Temple::Utils.escape_html((link_to "Follow @#{::Configuration[:twitter_username]}", "http://twitter.com/#{::Configuration[:twitter_username]}", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px' })) %>
+</div></h1></header>
+
+<header>
+<h1>
+<%= ::Temple::Utils.escape_html((t('blogo.user.tags'))) %>
+</h1></header><div class="tags">
+<% @tags.each do |tag|
+ %><%= ::Temple::Utils.escape_html((link_to tag.name, blogo_tag_path(tag), class: 'tag pure-button button-secondary')) %>
+<% end %></div></aside>

@@ -1,6 +1,6 @@
-<%= link_to '',"https://www.kwendoo.com/", class: 'logo-icon', target: 'logo' %>
+<%= link_to '',"https://#{Blogo.config.site_url}", class: 'logo-icon', target: 'logo' %>
 
-<%= link_to 'Accueil du site',"https://www.kwendoo.com/", class: '', target: 'home' %>
+<%= link_to 'Accueil du site',"https://#{Blogo.config.site_url}", class: '', target: 'home' %>
 
 <% if Blogo.config.twitter_username %>
   <%= link_to '',"https://twitter.com/#{Blogo.config.twitter_username}", class: '', target: 'twitter' %>

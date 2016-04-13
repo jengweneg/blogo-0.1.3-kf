@@ -15,6 +15,9 @@
 
 
 <aside>
+    
+  <%= image_tag("blogo/#{Blogo.config.site_icon}-icon.png", :align=> "middle") %>
+
   <% if @recent_posts %>
     <header>
       <h1><%= t('blogo.user.recent_posts') %></h1>
@@ -33,7 +36,7 @@
     <h1><%= t('blogo.user.Facebook') %></h1>
   </header>
   <div class="facebook-box">
-    <span class="fb-page"  data-hide-cover="false" data-header="true" data-height="40" data-href="<%= ::Temple::Utils.escape_html('https://www.facebook.com/Kwendoo-1556025521336892/') %>" data-layout="standard" data-show-border="true" data-width="264" data-show-facepile="true">
+    <span class="fb-page"  data-hide-cover="false" data-header="true" data-height="40" data-href="<%= "https://www.facebook.com/#{Blogo.config.facebook_username}" %>" data-layout="standard" data-show-border="true" data-width="264" data-show-facepile="true">
     </span>
   </div>
 
@@ -42,8 +45,8 @@
     <h1><%= t('blogo.user.Twitter') %></h1>
   </header> 
   <div class="twitter-box">
-    <%= link_to "Follow @Kwendoo_", "http://twitter.com/Kwendoo_", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px'} %> 
-    <a class="twitter-timeline" data-widget-id="718867821405585410" data-chrome="nofooter" href="https://twitter.com/kwendoo_"> Tweets de @kwendoo_ </a> 
+    <%= link_to "Follow @Kwendoo_", "http://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px'} %> 
+    <a class="twitter-timeline" data-widget-id="718867821405585410" data-chrome="nofooter" href="https://twitter.com/kwendoo_"> Tweets de @#{Blogo.config.twitter_username} </a> 
   </div>
 
 

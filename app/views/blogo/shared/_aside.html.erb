@@ -29,8 +29,8 @@
         </li>
       <% end %>
     </ul>
-  <% end %>
-
+  <% end %>  
+ 
 
   <header>
     <h1><%= t('blogo.user.Facebook') %></h1>
@@ -46,7 +46,11 @@
   </header> 
   <div class="twitter-box">
     <%= link_to "Follow @#{Blogo.config.twitter_username}", "http://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px'} %> 
-    <a class="twitter-timeline" data-widget-id="718867821405585410" data-chrome="nofooter" href="https://twitter.com/#{Blogo.config.twitter_username}"> Tweets de @#{Blogo.config.twitter_username} </a> 
+    <% if #{Blogo.config.twitter_username}=='Kwendoo_' %>
+       <a class = "twitter-timeline" data-widget-id = "718867821405585410" data-chrome="nofooter" href="https://twitter.com/#{Blogo.config.twitter_username}" > Tweets de @#{Blogo.config.twitter_username} </a>
+    <% else %>
+       <a class = "twitter-timeline" data-widget-id = "720367836070162433" data-chrome="nofooter" href="https://twitter.com/#{Blogo.config.twitter_username}" > Tweets de @#{Blogo.config.twitter_username} </a> 
+    <% end %> 
   </div>
 
 

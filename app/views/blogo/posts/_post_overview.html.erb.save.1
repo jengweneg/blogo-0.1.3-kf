@@ -1,0 +1,7 @@
+      <h2><%= link_to post.title, blogo_post_path(post) %></h2>
+       <h2><a href="">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </a></h2>
+	<div class="clearfix post-meta">
+	<p><span>Admin</span> <span>20 Jan 2014</span> <span>4 comments</span> <span>Category</span></p>
+	</div>
+      <p><%= raw post_overview(post) %></p>
+      <p><%= link_to t('blogo.user.read_post'), blogo_post_path(post) %></p>

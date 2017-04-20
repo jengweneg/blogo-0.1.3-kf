@@ -1,14 +1,13 @@
-<div class="article">
-            <h2><span><%= link_to post.title, blogo_post_path(post) %></span></h2>
-            <div class="clr"></div>
-            <p class="post-data">
-			<span class="date">
-			   <time datetime="<%= post.published_at %>">
-               <%= I18n.localize(post.published_at.to_date, format: :long) %>
-               </time>
-			</span> 
-			&nbsp;|&nbsp; Posted by <%= t('blogo.user.post_by') %> <%= post.user.name %></p>
-            <p><%= raw post_overview(post) %></p>
-            <p class="spec"><%= link_to t('blogo.user.read_post'), blogo_post_path(post) %></p>
-            <div class="clr"></div>
-          </div>
+<div class="clearfix single_content">
+<div class="clearfix post_detail">     
+<h2><%= link_to post.title, blogo_post_path(post) %></h2>
+	<div class="clearfix post-meta">
+    <p><span>Posted on <time datetime="<%= post.published_at %>"></span><span><%= I18n.localize(post.published_at.to_date, format: :long) %></time></span><span><%= link_to post.title, blogo_post_path(post) %></span>
+</span></p>
+     </div>
+      <div class="clearfix post_excerpt">
+      <p><%= raw post_overview(post) %></p>
+      </div>
+      <%= link_to t('blogo.user.read_post'), blogo_post_path(post) %>
+</div>
+</div>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= @meta[:title] %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<%= stylesheet_link_tag "blogo/style" %>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<%= render "blogo/shared/google_analytics" %>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+
+</head>
+<body>
+<!-- START PAGE SOURCE -->
+<div class="main">
+  <div class="main_resize">
+    <div class="header">
+      <div class="menu_nav">
+	     <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="support.html">kwendoo.rw</a></li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+      <div class="hbg"> <img src="http://www.dentons.com/~/media/Images/Website/Background%20Images/Landing%20Pages/Whats%20Different%20About%20Dentons/Recognition/293_recognition2.jpg?h=375&w=475&crop=1" width="641" height="289" alt="" />
+        <div class="logo">
+         <img src="https://www.kwendoo.rw/assets/kwendoo-logo-3c5c8913779caf6d1f58edb2f89d079a.svg"> <%= link_to Blogo.config.site_title, blogo_root_path %><%= Blogo.config.site_subtitle %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_bg">
+        <div class="mainbar">
+          <div class="article">
+            <div class="clr"></div>
+              <%= yield %>
+            <div class="clr"></div>
+          </div>
+          
+        </div>
+        <div class="sidebar">
+          <div class="gadget">
+            <div class="search">
+              
+              <div class="clr"></div>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="gadget">
+            <h2><span>
+Twitter</span></h2>
+            <div class="clr"></div>
+          </div>
+           <a class="twitter-timeline" data-height="400" href="https://twitter.com/KwendooRw">Tweets by KwendooRw</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <div class="gadget">
+            <h2><span>Facebook</span></h2>
+            <div class="clr"></div>
+            <ul class="ex_menu">
+              <li><a href="#">Donec mattis</a> purus nec placerat bibendum</li>
+            </ul>
+          </div>
+          <div class="gadget">
+            <h2 class="grey"><span>recent posts</h2>
+            <div class="clr"></div>
+            <div class="testi">
+              <p class="title"><
+			  <% if @recent_posts %>
+                 <ul class="blogo-recent-posts">
+                 <% @recent_posts.each do |post| %>
+                <li>
+                <%= link_to post.title, blogo_post_path(post) %>
+                </li>
+                <% end %>
+                </ul>
+              <% end %>
+</p>
+            </div>
+          </div>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+    <div class="fbg">
+      <div class="footer">
+    <div class="footer_resize">
+      <p class="lf">Copyright &copy; 2010 <a href="#">aaaaaSiteName</a> - All Rights Reserved</p>
+      <p class="rf">Design by <a href="http://www.rocketwebsitetemplates.com/">Rocket Website Templates</a></p>
+      <div class="clr"></div>
+    </div>
+  </div>
+    </div>
+  
+<!-- END PAGE SOURCE -->
+</body>
+</html>

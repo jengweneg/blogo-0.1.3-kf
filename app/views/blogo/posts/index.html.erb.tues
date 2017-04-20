@@ -1,4 +1,4 @@
-<div class="clearfix single_content">
+d<div id="main">
   <% @paginator.items.each do |post| %>
     <%= render partial: 'post_overview', locals: {post: post} %>
   <% end %>

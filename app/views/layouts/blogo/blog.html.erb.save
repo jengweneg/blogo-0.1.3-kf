@@ -29,11 +29,12 @@
 			<div class="wrapper header">
                                        <div class="clearfix header_top">
 					<div class="clearfix logo floatleft">
-                                        <img src="https://www.kwendoo.com/assets/kwendoo-logo-3c5c8913779caf6d1f58edb2f89d079a.svg" height="70%" width="70%">
+				        <h1><span>Welcome to </span>  Kwendoo</h1>
 					</div>
-					<div class="a" style="float:right; margin-top:30px;">
+					<div class="clearfix search floatright">
 						<form>
-                                                <h1> Welcome to <%= link_to Blogo.config.site_title, blogo_root_path %></h1>
+							<input type="text" placeholder="Search"/>
+							<input type="submit" />
 						</form>
 					</div>
 				</div>
@@ -41,9 +42,9 @@
 					<nav>
 						<ul id="nav">
 							<li><a href="">Home</a></li>
-							<li><a href="https://www.kwendoo.rw/commentçamarche" target=_ >How it works?</a></li>
-							<li><a href="https://www.kwendoo.rw/discover" target=_ >Public uduseke</a></li>
-							<li><a href="https://www.kwendoo.rw/login" target=_ >Create Agaseke</a></li>
+							<li><a href="">How it works?</a></li>
+							<li><a href="">Public uduseke</a></li>
+							<li><a href="">Create Agaseke</a></li>
 							<li><a href="">Contact us</a></li>
 						</ul>
 					</nav>
@@ -56,12 +57,21 @@
 			
 				<div class="clearfix main_content floatleft">
 				
+					<img src="https://www.kwendoo.com/assets/kwendoo-logo-3c5c8913779caf6d1f58edb2f89d079a.svg" width="50px"%" hei>
 					
                                             <%= yield %>
 					
 				</div>
 				<div class="clearfix sidebar_container floatright">
-				        <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f5e053e60d2b70"></script> 
+				
+					<div class="clearfix newsletter">
+						<form>
+							<h2>Signup for newsletter</h2>
+							<input type="text" placeholder="Name" id="mce-TEXT"/>
+							<input type="email" placeholder="Name" id="mce-EMAIL"/>
+							<input type="submit" value="Submit" id="mc-embedded-subscribe"/>
+						</form>
+					</div>
 					<div class="clearfix sidebar">
 						<div class="clearfix single_sidebar">
 							<div class="popular_post">
@@ -80,7 +90,7 @@
 							</div>
 							</div>
 						<div class="clearfix single_sidebar category_items">
-							<h2>Kwendoo on Facebook</h2>
+							<h2>Kwendoo Rwanda on Facebook</h2>
 								<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -89,21 +99,15 @@
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=183265711823162";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-          
-<div class="facebook-box">
-   <div class="fb-page" data-href="<%= "https://www.facebook.com/#{Blogo.config.facebook_username}" %>" data-tabs="timeline" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<%= "https://www.facebook.com/#{Blogo.config.facebook_username}" %>" class="fb-xfbml-parse-ignore"><a href="<%= "https://www.facebook.com/#{Blogo.config.facebook_username}" %>">#{Blogo.config.facebook_username}</a></blockquote></div>
-    </span>
-  </div>
 
+<div class="fb-page" data-href="https://www.facebook.com/kwendoorwanda" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cove$
+         </div>
 						</div>
 						<div class="clearfix single_sidebar">
-							<h2>Kwendoo on Twitter</h2>
+							<h2>Kwendoo rwanda on Twitter</h2>
 							<ul>
-								<li><a class="twitter-timeline" data-height="400" href="<%= "https://twitter.com/#{Blogo.config.twitter_username}" %>" >Tweets by #{Blogo.config.twitter_username} </a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-                                                                <li><%= link_to "Follow @#{Blogo.config.twitter_username}", "http://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px'} %>
-
-                                                               
-                         				</ul>
+								<li><a class="twitter-timeline" data-height="400" href="https://twitter.com/KwendooRw">Tweets by KwendooRw</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -114,16 +118,22 @@
 			<div class="clearfix wrapper footer_top">
 				<div class="clearfix footer_top_container">
 					<div class="clearfix single_footer_top floatleft">
-						<h2>Secure</h2>
-						<p><%= "#{Blogo.config.widget_id}" %>.</p>
+						<h2>From Twitter</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="">Lorem Ipsum has been the industry</a> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 					</div>
 					<div class="clearfix single_footer_top floatleft">
-                                                        <h2>International</h2>
-                                                        <p>kwendoo is a brand already known in three european countries where the service has been operating since 2015</p>
-                                        </div>
+						<h2>Recent Post</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy <a href="">Lorem Ipsum has been the industry</a> text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
 					<div class="clearfix single_footer_top floatleft">
-						<h2>Easy payment</h2>
-						<p>Possibility to contribute in over 20 currencies. Holders of uduseke or beneficiaries may withdraw funds easily</p>
+						<h2>Usefull Links</h2>
+						<ul>
+							<li><a href="">Create Agaseke</a></li>
+							<li><a href="">How it works?</a></li>
+							<li><a href="">Public uduseke</a></li>
+							<li><a href="">About us</a></li>
+							<li><a href="">Why kwendoo</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -132,11 +142,18 @@
 		<section id="footer_bottom_area">
 			<div class="clearfix wrapper footer_bottom">
 				<div class="clearfix copyright floatleft">
-					<p> Copyright &copy; All rights reserved by <span><%= link_to Blogo.config.site_title, blogo_root_path %></span></p>
+					<p> Copyright &copy; All rights reserved by <span>Wpfreeware.com</span></p>
 				</div>
 				<div class="clearfix social floatright">
 					<ul>
-						Designed by Justin Butera
+						<li><a class="tooltip" title="Facebook" href=""><i class="fa fa-facebook-square"></i></a></li>
+						<li><a class="tooltip" title="Twitter" href=""><i class="fa fa-twitter-square"></i></a></li>
+						<li><a class="tooltip" title="Google+" href=""><i class="fa fa-google-plus-square"></i></a></li>
+						<li><a class="tooltip" title="LinkedIn" href=""><i class="fa fa-linkedin-square"></i></a></li>
+						<li><a class="tooltip" title="tumblr" href=""><i class="fa fa-tumblr-square"></i></a></li>
+						<li><a class="tooltip" title="Pinterest" href=""><i class="fa fa-pinterest-square"></i></a></li>
+						<li><a class="tooltip" title="RSS Feed" href=""><i class="fa fa-rss-square"></i></a></li>
+						<li><a class="tooltip" title="Sitemap" href=""><i class="fa fa-sitemap"></i> </a></li>
 					</ul>
 				</div>
 			</div>
@@ -175,10 +192,6 @@
 ---- You are allowed to change anything you like. Find out more Awesome Templates @ wpfreeware.com
 ---- Read License-readme.txt file to learn more.
 -->	
-
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58f5e053e60d2b70">
-</script> 
 		
 	</body>
 </html>

@@ -70,9 +70,15 @@ ul,ol{margin:0;padding:0;list-style:none;}
 
 /* home page style */
 
-#header_area{background: url("../images/blogo/header_bg.png") repeat-x scroll 0 0 #082d04; background-color:white;}
+#header_area{background: url("../images/blogo/header_bg.png") repeat-x scroll 0 0 #808080; background-color:white;}
 
-#content_area{background: url("../images/blogo/body_top_bg.png") repeat-x scroll center top #082d04;
+#content_area{background: url("../images/blogo/body_top_bg.png") repeat-x scroll center top ;
+
+background-attachment: fixed;
+
+background-repeat: no-repeat;
+
+background-image: url(http://www.mrwallpaper.com/wallpapers/daisies-green-background-1920x1200.jpg);
 
 padding-top: 25px;}
 
@@ -155,6 +161,8 @@ width: 33px;}
 .header_bottom{background: none repeat scroll 0 0 rgb(230, 165, 19);
 
 min-height: 30px;
+
+box-shadow: -1px 3px 16px 1px #888888;
 
 padding: 10px;}
 
@@ -246,7 +254,7 @@ padding: 5px;}
 
 .content{}
 
-.content_title {background: url("../images/blogo/latest_post_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+.content_title {background: url("../images/blogo/llatest_post_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
 
 height: 73px;
 

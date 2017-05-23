@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# stub: blogo 0.1.3.9 ruby lib
+# stub: blogo 0.1.3.10 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "blogo"

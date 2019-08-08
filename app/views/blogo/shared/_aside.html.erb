@@ -1,0 +1,67 @@
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<aside>
+    
+  <%= image_tag("blogo/#{Blogo.config.site_icon}-icon.png", :align=> "middle") %>
+
+  <% if @recent_posts %>
+    <header>
+      <h1><%= t('blogo.user.recent_posts') %></h1>
+    </header>
+    <ul class="blogo-recent-posts">
+      <% @recent_posts.each do |post| %>
+        <li>
+          <%= link_to post.title, blogo_post_path(post) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>  
+ 
+
+  <header>
+    <h1><%= t('blogo.user.Facebook') %></h1>
+  </header>
+  <div class="facebook-box">
+    <span class="fb-page"  data-hide-cover="false" data-header="true" data-height="40" data-href="<%= "https://www.facebook.com/#{Blogo.config.facebook_username}" %>" data-layout="standard" data-show-border="true" data-width="264" data-show-facepile="true">
+    </span>
+  </div>
+
+
+  <header>
+    <h1><%= t('blogo.user.Twitter') %></h1>
+  </header> 
+  <div class="twitter-box">
+    <%= link_to "Follow @#{Blogo.config.twitter_username}", "http://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px'} %> 
+    <% if #{Blogo.config.twitter_username}=='Kwendoo_' %>
+       <a class = "twitter-timeline" data-widget-id = "718867821405585410" data-chrome="nofooter" href="https://twitter.com/#{Blogo.config.twitter_username}" > Tweets de @#{Blogo.config.twitter_username} </a>
+    <% else %>
+       <a class = "twitter-timeline" data-widget-id = "720367836070162433" data-chrome="nofooter" href="https://twitter.com/#{Blogo.config.twitter_username}" > Tweets de @#{Blogo.config.twitter_username} </a> 
+    <% end %> 
+  </div>
+
+
+  <header>
+    <h1><%= t('blogo.user.tags') %></h1>
+  </header>
+  <div class="tags">
+    <% @tags.each do |tag| %>
+      <%= link_to tag.name, blogo_tag_path(tag), class: 'tag pure-button button-secondary' %>
+    <% end %>
+  <div>
+
+
+</aside>

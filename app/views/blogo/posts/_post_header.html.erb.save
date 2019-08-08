@@ -1,0 +1,4 @@
+<h2><a href="#"><%= link_to post.title, blogo_post_path(post) %></h2>
+      <p class="date">Posted on <time datetime="<%= post.published_at %>">
+        <%= I18n.localize(post.published_at.to_date, format: :long) %>
+      </time>/</p>

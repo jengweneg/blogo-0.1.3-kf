@@ -1,0 +1,8 @@
+<div class="article">
+            <h2><span>Template License</span></h2>
+            <div class="clr"></div>
+            <p class="post-data"><span class="date">March 16, 2018</span> &nbsp;|&nbsp; Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+            <p><%= raw post_overview(post) %></p>
+            <p class="spec"><a href="#" class="rm fl"><%= link_to t('blogo.user.read_post'), blogo_post_path(post) %></p>
+            <div class="clr"></div>
+          </div>

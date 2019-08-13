@@ -41,7 +41,7 @@
 					<nav>
 						<ul id="nav">
 							<li><%= link_to Blogo.config.site_title, blogo_root_path %></li>
-							<li><%= link_to Blogo.config.site_url %> Accueil Site</li>
+							<li><%= link_to Blogo.config.site_url Accueil Site %> </li>
 						</ul>
 					</nav>
 				</div>
@@ -77,7 +77,7 @@
 							</div>
 							</div>
 						<div class="clearfix single_sidebar category_items">
-							<h2><%=#{Blogo.config.site_icon}"%> on Facebook</h2>
+							<h2> "#{Blogo.config.site_icon}" on Facebook</h2>
 								<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -94,7 +94,7 @@
 
 						</div>
 						<div class="clearfix single_sidebar">
-							<h2> <%=#{Blogo.config.site_icon} %> on Twitter</h2>
+							<h2> #{Blogo.config.site_icon} on Twitter</h2>
 							<ul>
 								<li><a class="twitter-timeline" data-height="400" href="<%= "https://twitter.com/#{Blogo.config.twitter_username}" %>" >Tweets by #{Blogo.config.twitter_username} </a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
                                                                 <li><%= link_to "Follow @#{Blogo.config.twitter_username}", "http://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-follow-button', data: { button: 'blue', :'text-color' => '#ffffff', :'link-color' => '#ffffff', width: '224px'} %>
